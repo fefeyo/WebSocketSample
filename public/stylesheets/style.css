@@ -1,0 +1,36 @@
+.container-fluid {
+    display: flex;
+}
+
+#main {
+    flex: 3;
+}
+
+#sub {
+    flex: 1;
+}
+
+.user {
+    list-style: none;
+    font-size: 18px;
+}
+
+form {
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+}
+
+#m {
+    width: 800px;
+    padding: 8px;
+}
+
+.post {
+    margin-left: 5px;
+}
+
+.error {
+    display: none;
+    color: red;
+}

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    div#sub
+        h3.title オンラインユーザー
+        ul#users
+    div#main
+        h3.title メッセージ
+        ul#messages
+    form(action="")
+        p.input_now
+        input#m(autocomplete="off")
+        button.btn.btn-info.post.btn-lg 投稿        
+    div#login.modal.fade(data-backdrop="static")
+        div.modal-dialog.modal-content
+            div.modal-header
+                h4.modal-title ユーザー名を入力してください
+            div.modal-body
+                p.error ※入力されていません
+                div.form-group
+                    input#user_name.form-control(type="text")
+            div.modal-footer
+                button#submit_login.btn.btn-default 完了
+                
+    script(src="/socket.io/socket.io.js")
+    script(src="/javascripts/index.js")

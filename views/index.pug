@@ -10,7 +10,13 @@ block content
     form(action="")
         p.input_now
         input#m(autocomplete="off")
-        button.btn.btn-info.post.btn-lg 投稿        
+        button.btn.btn-info.post.btn-lg 投稿    
+    div#private
+        p#private_header
+            span#private_name やじゅう 
+            span#private_close ✕
+        ul#private_messages
+        input#private_m(type="text")    
     div#login.modal.fade(data-backdrop="static")
         div.modal-dialog.modal-content
             div.modal-header

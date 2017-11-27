@@ -1,29 +1,97 @@
+html, body {
+    height: 100%;
+}
+
 .container-fluid {
+    height: 70%;
     display: flex;
 }
 
 #main {
     flex: 3;
+    height: 100%;
+    overflow: auto;
 }
 
 #sub {
     flex: 1;
 }
 
-.user {
+#users {
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
+#users li {
     list-style: none;
-    font-size: 18px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+#users li:hover {
+    background-color: #ecf0f1;
+    cursor: pointer;
 }
 
 form {
     width: 100%;
     position: fixed;
     bottom: 20px;
+    text-align: center;
+}
+
+#messages {
+    height: 80%;
+}
+
+#messages li {
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 0;
 }
 
 #m {
     width: 800px;
     padding: 8px;
+}
+
+#private_header {
+    background-color: #bdc3c7;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#private_close {
+    position: absolute;
+    right: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+#private {
+    position: fixed;
+    right: 0;
+    bottom: -600px;
+    width: 300px;
+    height: 500px;
+    background: black;
+}
+
+#private_messages {
+    height: 80%;
+    padding-left: 0;
+    color: white;
+    overflow: auto;
+    padding-left: 5px;
+
+}
+
+#private_m {
+    width: 95%;
+    margin-left: 2.5%;
 }
 
 .post {

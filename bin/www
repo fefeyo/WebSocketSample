@@ -20,6 +20,7 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+var users = {};
 
 //socket.io
 var io = require('socket.io').listen(server);
@@ -30,10 +31,14 @@ io.on('connection', function(socket){
     });
     socket.on('login', function(name) {
         console.log(name + "さんがログインしました。");
-        io.emit('login', name + ":" + socket.id);
+        users[socket.id] = name;
+        users["current"] = name;
+        io.emit('login', users);
+        delete users["current"];
     });
     socket.on('disconnect', function() {
         io.emit('logout', socket.id);
+        delete users[socket.id];
     });
     socket.on('input start', function(name) {
         console.log(name + "が入力開始");
